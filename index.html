@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    function redirect() {
+      var selectList = document.getElementById("mySelect");
+      var selectedOption = selectList.options[selectList.selectedIndex].value;
+      
+      if (selectedOption === "customer") {
+        window.location.href = "The great Indian kitchen/menu.html";
+      } else if (selectedOption === "manager") {
+        window.location.href = "https://reservation1210.000webhostapp.com/manager.php";
+      }
+    }
+  </script>
   <title>Login Page</title>
   <style type="text/css">
     @import url(https://fonts.googleapis.com/css?family=Rokkitt);
@@ -205,23 +217,23 @@ select:focus {
       <h1>Login</h1>
       <div class="login-content">
         <label id="emailLabel">Login as</label>
-        <select>
+        <form>
+        <select id="mySelect">
           <option>Login as</option>
-          <option>Customer</option>
+          <option value="customer">Customer</option>
           <option>Owner</option>
-          <option>Manager</option>
+          <option value="manager">Manager</option>
           <option>Waiter</option>
           <option>Chef</option>
           <option>Busboys</option>
           <option>Other worker</option>
         </select>
-        <form action="The great Indian kitchen/menu.html">
         <label id="emailLabel">Please enter a valid email</label>
         <input id="email" type="email" name="" placeholder="Email" required >
         <label id="passwordLabel">Please enter your password</label>
         <input type="password" id="password" placeholder="Password" / ><br>
           <a href="#">Forgot Username </a>&#x2022<a href="#"> Forgot Password</a><br>
-          <input type="submit" value="login">
+          <input type="submit" value="login" onclick="redirect()">
         </form>
       </div>
     </div>
