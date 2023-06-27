@@ -3,15 +3,26 @@
 <head>
   <script>
     function redirect() {
-      var selectList = document.getElementById("mySelect");
-      var selectedOption = selectList.options[selectList.selectedIndex].value;
-      
-      if (selectedOption === "customer") {
-        window.location.href = "The great Indian kitchen/menu.html";
-      } else if (selectedOption === "manager") {
-        window.location.href = "https://reservation1210.000webhostapp.com/manager.php";
-      }
+  var selectList = document.getElementById("mySelect");
+  var selectedOption = selectList.options[selectList.selectedIndex].value; 
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  
+  if (selectedOption === "customer") {
+    if (email === "dhruv@gmail.com" && password === "123") {
+      window.location.href = "The great Indian kitchen/menu.html";
+    } else {
+      alert("Incorrect credentials for customer.");
     }
+  } else if (selectedOption === "manager") {
+    if (email === "vansh@gmail.com" && password === "123") {
+      window.location.href = "https://reservation1210.000webhostapp.com/manager.php";
+    } else {
+      alert("Incorrect credentials for manager.");
+    }
+  }
+}
+
   </script>
   <title>Login Page</title>
   <style type="text/css">
