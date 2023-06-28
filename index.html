@@ -9,13 +9,13 @@
   var password = document.getElementById("password").value;
   
   if (selectedOption === "customer") {
-    if (email === "dhruv@gmail.com" && password === "123") {
+    if ((email === "dhruv@gmail.com"||email==="priyal@gmail.com") && password === "123") {
       window.location.href = "The great Indian kitchen/menu.html";
     } else {
       alert("Incorrect credentials for customer.");
     }
   } else if (selectedOption === "manager") {
-    if (email === "vansh@gmail.com" && password === "123") {
+    if ((email === "vansh@gmail.com"||email==="krishna@gmail.com") && password === "123") {
       window.location.href = "https://reservation1210.000webhostapp.com/manager.php";
     } else {
       alert("Incorrect credentials for manager.");
